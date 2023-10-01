@@ -25,7 +25,4 @@ QUEUE={queue}
 LOGGER_LEVEL=DEBUG
 ``
 
-### RabbitMQ for configure and run the locally tests
-RabbitMq image for the skipped tests to run locally until the implementation of integration tests:
-docker run -d --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:rabbit
 

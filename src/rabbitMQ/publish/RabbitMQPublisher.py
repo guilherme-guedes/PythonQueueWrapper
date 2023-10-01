@@ -23,3 +23,4 @@ class RabbitMQPublisher(BaseQueuePublisher):
             properties=pika.BasicProperties(delivery_mode=2),
         )
         logging.debug('Published.')
+        return True

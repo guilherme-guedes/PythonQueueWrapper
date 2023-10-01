@@ -23,4 +23,4 @@ class AWSSQSPublisher(BaseQueuePublisher):
             raise error
         else:
             logging.debug('Published.')
-            return response
+            return response != None and response['MessageId'] != None
