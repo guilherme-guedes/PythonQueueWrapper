@@ -1,0 +1,10 @@
+site_name: Simple Queue Wrapper
+repo_url: https://github.com/guilherme-guedes/PythonQueueWrapper
+repo_name: guilherme-guedes/Simple_Queue_Wrapper
+edit_uri: tree/main/docs
+
+theme: 
+  name: material
+  language: pt-BR
+  #logo: assets/logo.png
+  #favicon: assets/logo.png
