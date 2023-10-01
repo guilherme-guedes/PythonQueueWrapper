@@ -1,5 +1,6 @@
 from src.rabbitMQ.config.RabbitMQConfiguration import RabbitMQConfiguration
 
+
 class Test_RabbitMQConfiguration:
     def test_should_create_rabbitmq_config(self):
         host = 'localhost'
@@ -10,7 +11,9 @@ class Test_RabbitMQConfiguration:
         password = 'SECRET_KEY'
         queue_name = 'QUEUE'
 
-        configuration = RabbitMQConfiguration(user, password, queue_name, host, port, exchange, routing_key)
+        configuration = RabbitMQConfiguration(
+            user, password, queue_name, host, port, exchange, routing_key
+        )
         assert configuration != None
         assert configuration.USER == user
         assert configuration.PASSWORD == password

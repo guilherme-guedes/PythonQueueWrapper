@@ -1,5 +1,6 @@
 from src.awsSQS.config.AWSSQSConfiguration import AWSSQSConfiguration
 
+
 class Test_AWSSQSConfiguration:
     def test_should_create_aws_config(self):
         user = 'ACCESS_KEY'

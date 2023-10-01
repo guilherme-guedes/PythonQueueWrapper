@@ -4,8 +4,8 @@ import logging
 
 from src.rabbitMQ.RabbitMQConnectionFactory import RabbitMQConnectionFactory
 
+
 class RabbitMQChannelFactory(ABC):
-    
     @staticmethod
     def create_channel(configuration):
         logging.info('creating channel...')
