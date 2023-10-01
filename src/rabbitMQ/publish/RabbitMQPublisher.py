@@ -1,8 +1,10 @@
-import pika
 import logging
-from src.publish.BaseQueuePublisher import BaseQueuePublisher
-from src.rabbitMQ.RabbitMQChannelFactory import RabbitMQChannelFactory
-from src.rabbitMQ.RabbitMQConnectionFactory import RabbitMQConnectionFactory
+
+import pika
+
+from base.publish.BaseQueuePublisher import BaseQueuePublisher
+from rabbitMQ.RabbitMQChannelFactory import RabbitMQChannelFactory
+from rabbitMQ.RabbitMQConnectionFactory import RabbitMQConnectionFactory
 
 
 class RabbitMQPublisher(BaseQueuePublisher):

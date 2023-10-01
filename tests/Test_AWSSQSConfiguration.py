@@ -1,4 +1,4 @@
-from src.awsSQS.config.AWSSQSConfiguration import AWSSQSConfiguration
+from awsSQS.config.AWSSQSConfiguration import AWSSQSConfiguration
 
 
 class Test_AWSSQSConfiguration:

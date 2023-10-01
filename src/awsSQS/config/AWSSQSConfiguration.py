@@ -1,4 +1,4 @@
-from src.config.PubSubConfiguration import PubSubConfiguration
+from base.config.PubSubConfiguration import PubSubConfiguration
 
 
 class AWSSQSConfiguration(PubSubConfiguration):

@@ -1,5 +1,6 @@
 import logging
 from abc import ABC
+
 import boto3
 from botocore.exceptions import ClientError
 

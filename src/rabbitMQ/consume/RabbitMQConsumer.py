@@ -1,8 +1,10 @@
-import pika
 import logging
-from src.consume.BaseQueueConsumer import BaseQueueConsumer
-from src.rabbitMQ.RabbitMQChannelFactory import RabbitMQChannelFactory
-from src.rabbitMQ.RabbitMQConnectionFactory import RabbitMQConnectionFactory
+
+import pika
+
+from base.consume.BaseQueueConsumer import BaseQueueConsumer
+from rabbitMQ.RabbitMQChannelFactory import RabbitMQChannelFactory
+from rabbitMQ.RabbitMQConnectionFactory import RabbitMQConnectionFactory
 
 
 class RabbitMQConsumer(BaseQueueConsumer):

@@ -1,8 +1,9 @@
-from abc import ABC
-import pika
 import logging
+from abc import ABC
 
-from src.rabbitMQ.RabbitMQConnectionFactory import RabbitMQConnectionFactory
+import pika
+
+from rabbitMQ.RabbitMQConnectionFactory import RabbitMQConnectionFactory
 
 
 class RabbitMQChannelFactory(ABC):

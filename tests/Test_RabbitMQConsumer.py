@@ -1,9 +1,11 @@
-import sys
 import os
-from dotenv import load_dotenv
+import sys
+
 import pytest
-from src.rabbitMQ.consume.RabbitMQConsumer import RabbitMQConsumer
-from src.rabbitMQ.config.RabbitMQConfiguration import RabbitMQConfiguration
+from dotenv import load_dotenv
+
+from rabbitMQ.config.RabbitMQConfiguration import RabbitMQConfiguration
+from rabbitMQ.consume.RabbitMQConsumer import RabbitMQConsumer
 
 
 class Test_RabbitMQConsumer:

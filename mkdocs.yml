@@ -8,3 +8,9 @@ theme:
   language: pt-BR
   #logo: assets/logo.png
   #favicon: assets/logo.png
+
+plugin:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [src]

@@ -1,9 +1,11 @@
 import logging
 from time import sleep
+
 import boto3
 from botocore.exceptions import ClientError
-from src.consume.BaseQueueConsumer import BaseQueueConsumer
-from src.awsSQS.AWSSQSQueueFactory import AWSSQSQueueFactory
+
+from awsSQS.AWSSQSQueueFactory import AWSSQSQueueFactory
+from base.consume.BaseQueueConsumer import BaseQueueConsumer
 
 
 class AWSSQSConsumer(BaseQueueConsumer):

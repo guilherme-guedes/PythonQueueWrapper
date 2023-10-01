@@ -1,8 +1,10 @@
 import logging
+
 import boto3
 from botocore.exceptions import ClientError
-from src.publish.BaseQueuePublisher import BaseQueuePublisher
-from src.awsSQS.AWSSQSQueueFactory import AWSSQSQueueFactory
+
+from awsSQS.AWSSQSQueueFactory import AWSSQSQueueFactory
+from base.publish.BaseQueuePublisher import BaseQueuePublisher
 
 
 class AWSSQSPublisher(BaseQueuePublisher):

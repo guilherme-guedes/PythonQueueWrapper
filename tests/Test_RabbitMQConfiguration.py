@@ -1,4 +1,4 @@
-from src.rabbitMQ.config.RabbitMQConfiguration import RabbitMQConfiguration
+from rabbitMQ.config.RabbitMQConfiguration import RabbitMQConfiguration
 
 
 class Test_RabbitMQConfiguration:
