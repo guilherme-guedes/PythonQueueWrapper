@@ -34,3 +34,18 @@ configuration = RabbitMQConfiguration(
 consumer = RabbitMQConsumer(configuration, __on_message_callback)
 consumer.start_listen()
 ```
+
+## Basic Usage with AWS SQS
+
+### Consumer 
+```
+def __on_message_callback(id, body):
+    do_somenthing(body)
+    
+configuration = AWSSQSConfiguration(
+    accessKeyId, secretKey, queue_name, region
+)
+
+consumer = AWSSQSConsumer(configuration, __on_message_callback)
+consumer.start_listen()
+```

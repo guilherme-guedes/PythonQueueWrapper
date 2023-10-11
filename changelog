@@ -1,0 +1,7 @@
+# Changelog
+
+## 1.0
+- Implement SQS integration
+- Generate python package
+- Deploy package on pip
+- Configure CI/CD

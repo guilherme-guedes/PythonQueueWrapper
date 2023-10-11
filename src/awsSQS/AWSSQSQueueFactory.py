@@ -11,7 +11,8 @@ class AWSSQSQueueFactory(ABC):
         try:
             sqs = AWSSQSQueueFactory.__create_sqs(configuration)
             queue = sqs.create_queue(
-                QueueName=configuration.QUEUE_NAME, Attributes={}
+                QueueName=configuration.QUEUE_NAME,
+                Attributes={'FifoQueue': str(configuration.IS_FIFO_QUEUE)},
             )
             logging.info(
                 "Created queue '%s' with URL=%s",

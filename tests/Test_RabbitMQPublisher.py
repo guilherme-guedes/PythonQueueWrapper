@@ -14,10 +14,10 @@ class Test_RabbitMQPublisher:
         self.__publisher = self.__create_publisher(self)
 
     def __create_publisher(self):
-        host = os.environ.get('HOST', 'localhost')
-        exchange = os.environ.get('EXCHANGE')
-        user = os.environ.get('USER')
-        password = os.environ.get('PASSWORD')
+        host = os.environ.get('HOST_RABBIT', 'localhost')
+        exchange = os.environ.get('EXCHANGE_RABBIT')
+        user = os.environ.get('USER_RABBIT')
+        password = os.environ.get('PASSWORD_RABBIT')
         queue = os.environ.get('QUEUE')
         port = 5672
         configuration = RabbitMQConfiguration(

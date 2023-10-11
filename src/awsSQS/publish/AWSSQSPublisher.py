@@ -1,3 +1,4 @@
+import hashlib
 import logging
 
 import boto3
@@ -13,10 +14,19 @@ class AWSSQSPublisher(BaseQueuePublisher):
         self.__queue = AWSSQSQueueFactory.create_queue(configuration)
 
     def publish(self, msg):
-        logging.debug('Publishing to' + self.__queue)
+        logging.debug('Publishing to' + str(self.__queue))
+
+        hash = hashlib.md5(msg.encode('utf-8')).hexdigest()
+
         try:
             response = self.__queue.send_message(
-                MessageBody=msg, MessageAttributes={}
+                MessageBody=msg,
+                MessageGroupId=self._config.MESSAGE_GROUP_ID
+                if self._config.IS_FIFO_QUEUE
+                else None,
+                MessageDeduplicationId=hash
+                if self._config.IS_FIFO_QUEUE
+                else None,
             )
         except ClientError as error:
             logging.exception('Publish message failed: %s', msg)
