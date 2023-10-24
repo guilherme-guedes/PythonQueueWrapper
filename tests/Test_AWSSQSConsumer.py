@@ -15,11 +15,11 @@ class Test_AWSSQSConsumer:
         self.__consumer = self.__create_consumer(self)
 
     def __create_consumer(self):
-        accessKeyId = os.environ.get('ACCESS_KEY_SQS')
-        secretKey = os.environ.get('SECRET_KEY_SQS')
-        queue_name = os.environ.get('QUEUE')
+        accessKeyId = os.environ.get('ACCESS_KEY_SQS', 'accessKeyId')
+        secretKey = os.environ.get('SECRET_KEY_SQS', 'secretKey')
+        queue_name = os.environ.get('QUEUE', 'queue_name')
         region = 'sa-east-1'
-        isFIFO = bool(os.environ.get('FIFO'))
+        isFIFO = bool(os.environ.get('FIFO'), 'False')
         configuration = AWSSQSConfiguration(
             accessKeyId, secretKey, queue_name, region, isFIFO
         )
